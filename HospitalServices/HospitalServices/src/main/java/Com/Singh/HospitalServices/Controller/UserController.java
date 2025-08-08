@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/hospital")
+@RequestMapping("/user")
 public class UserController {
 
 
     private  final  UserServices userServices;
 
 
-    @PostMapping("/user")
+    @PostMapping("/createUser")
     public UserResponseDto addNewUser(@RequestBody UserRequestDto userRequestDto)
     {
         return userServices.createUserAccount(userRequestDto);
